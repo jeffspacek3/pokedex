@@ -1,1 +1,1 @@
-console.log(age)
+alert('hello world');
