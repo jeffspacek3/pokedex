@@ -3,7 +3,7 @@ pokemonList = [
     {
         name: 'Bulbasaur',
         type: ['Grass', 'Poison'],
-        height: 23 ;
+        height: 23 
     },
     {
         name: 'Charmander',
@@ -13,9 +13,9 @@ pokemonList = [
     {
         name: 'Pikachu',
         type: ['Electric'],
-        height: 8 ;
+        height: 8 
     }
-];
+]
 
 for (let i=0; i < pokemonList.length; i++){
     if (pokemonList[i].height <19 && pokemonList[i].height >10 ){
