@@ -13,7 +13,7 @@ pokemonList = [
     {
         name: 'Pikachu',
         type: ['Electric'],
-        height: 9
+        height: 8
     }
 ]
 
