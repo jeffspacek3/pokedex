@@ -1,4 +1,4 @@
-let pokemonList = [];
+let pokemonList = [i];
 pokemonList = [
     {
         name: 'Bulbasaur',
@@ -19,11 +19,11 @@ pokemonList = [
 
 for (let i=0; i < pokemonList.length; i++){
     if (pokemonList[i].height <19 && pokemonList[i].age >10){
-        document.write(pokemonList[i].name + "is an average fighter");
+        document.write(pokemonList[i].name + "(" + pokemonList[i].height + ")" + "is an average fighter");
     }else if (pokemonList[i].height <9){
-        document.write(pokemonList[i].name + "is an small fighter");
+        document.write(pokemonList[i].name + "(" + pokemonList[i].height + "(" + "is an small fighter");
     }else {
-        document.write(pokemonList[i].name + "is a tall fighter");
+        document.write(pokemonList[i].name + "(" + pokemonList[i].height + "(" + "is a tall fighter");
     }
 }
 
