@@ -13,17 +13,17 @@ pokemonList = [
     {
         name: 'Pikachu',
         type: ['Electric'],
-        height: 09
+        height: 9
     }
 ]
 
 for (let i=0; i < pokemonList.length; i++){
     if (pokemonList[i].height <19 && pokemonList[i].age >10){
-        console.log(pokemonList[i].height + " is an average fighter");
+        document.write(pokemonList[i].height + " is an average fighter");
     }else if (pokemonList[i].height <9){
-        console.log(pokemonList[i].height + "is an small fighter");
+        document.write(pokemonList[i].height + "is an small fighter");
     }else {
-        console.log(pokemonList[i].height + "is a tall fighter");
+        document.write(pokemonList[i].height + "is a tall fighter");
     }
 }
 
