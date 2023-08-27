@@ -15,7 +15,6 @@ pokemonList = [
         height: 8 
     }
 ]
-];
 
 for (let i=0; i < pokemonList.length; i++){
     if (pokemonList[i].height <19 && pokemonList[i].height >10 ){
