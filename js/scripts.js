@@ -1,4 +1,3 @@
-let pokemonList = [];
 pokemonList = [
     {
         name: 'Bulbasaur',
@@ -18,7 +17,7 @@ pokemonList = [
 ]
 ];
 
-for (let pokemonList=0; i < pokemonList.length; i++){
+for (let i=0; i < pokemonList.length; i++){
     if (pokemonList[i].height <19 && pokemonList[i].height >10 ){
         document.write(pokemonList[i].name + "(" + pokemonList[i].height + ")" + "is an average fighter");
     }else if (pokemonList[i].height <9){
