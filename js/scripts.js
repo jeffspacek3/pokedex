@@ -25,3 +25,9 @@ for (let i=0; i < pokemonList.length; i++){
         document.write(pokemonList[i].name + "(" + pokemonList[i].height + ")" + "is a tall fighter");
     }
 }
+
+for (let i=0; i < pokemonList.length; i++){
+    if (pokemonList[i].height <20 && pokemonList[i].height ){
+        document.write(pokemonList[i].name + "wow thats big!");
+    }
+}
