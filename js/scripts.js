@@ -25,3 +25,8 @@ for (let i=0; i < pokemonList.length; i++){
         document.write(pokemonList[i].name + "(" + pokemonList[i].height + ")" + "is a tall fighter");
     }
 }
+
+for (let i=0 < pokemonList.length; i++){
+    if (pokemonList[i].type <'Fire'> ){
+        document.write(pokemonList[i].name + "("fire")" + "is a dangerous opponent")
+}
