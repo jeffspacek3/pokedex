@@ -27,6 +27,6 @@ for (let i=0; i < pokemonList.length; i++){
 }
 
 for (let i=0 < pokemonList.length; i++){
-    if (pokemonList[i].type <'Fire'> ){
+    if (pokemonList[i].type = Fire ){
         document.write(pokemonList[i].name + "("fire")" + "is a dangerous opponent")
 }
