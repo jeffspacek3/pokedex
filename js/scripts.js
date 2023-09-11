@@ -31,3 +31,13 @@ for (let i=0; i < pokemonList.length; i++){
         document.write("wow thats big!");
     }
 }
+
+
+//exercise 1.5 
+
+for (let i=0; i < pokemonList; i++) {
+  //console.log(pokemonList[i]);
+}
+
+pokemonList.forEach( (item) ==> console.log(item) )
+
