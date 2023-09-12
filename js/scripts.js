@@ -33,11 +33,31 @@ for (let i=0; i < pokemonList.length; i++){
 }
 
 
-//exercise 1.5 
+// --- --- --- --- exercise 1.5 --- --- --- --- ---
 
 for (let i=0; i < pokemonList; i++) {
   //console.log(pokemonList[i]);
 }
 
 pokemonList.forEach( (item) ==> console.log(item) )
+
+// --- --- --- --- IIFE --- --- --- --- ---
+
+let pokemonRepository = (function() {
+  let pokemonList = []; // empty array
+
+  return {
+    add: function(pokemon) {
+      pokemonList.push(pokemon);
+    },
+    getAll: function() {
+      return pokemonList;
+    }
+  };
+})();
+
+console.log(pokemonRepository.getAll()); // []
+pokemonRepository.add({ name: 'Pikachu' });
+console.log(pokemonRepository.getAll()); // [ { name: 'Pikachu' } ]
+
 
