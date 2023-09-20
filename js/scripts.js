@@ -1,3 +1,4 @@
+let pokemonRepository = (function () {
 pokemonList = [
     {
         name: 'Bulbasaur',
@@ -14,10 +15,8 @@ pokemonList = [
         type: ['Electric'],
         height: 8 
     },
-];
-
-///---------Exercise 1.6----------
-
+] ;
+  
 function add(pokemon) {
     if (
       typeof pokemon === "object" &&
@@ -25,15 +24,18 @@ function add(pokemon) {
       "height" in pokemon &&
       "types" in pokemon
     ) {
-      repository.push(pokemon);
-    } else {
+      pokemonList.push(pokemon); }
+    
+else {
       console.log("pokemon is not correct");
     }
   }
+
   function getAll() {
-    return repository;
+    return pokemoneList;
   }
-  function addListItem(pokemon){
+
+  function addListItem(pokemon) {
     let pokemonList = document.querySelector(".pokemon-list");
     let listpokemon = document.createElement("li");
     let button = document.createElement("button");
@@ -55,43 +57,10 @@ console.log(pokemonRepository.getAll());
 
 pokemonRepository.getAll().forEach(function (pokemon) {
   pokemonRepository.addListItem(pokemon);
-});
+} );
+  
 
 
 
-
-
-
-
-
-
-//-----notes-----
-
-// --- --- --- --- exercise 1.5 --- --- --- --- ---
-
-//for (let i=0; i < pokemonList; i++) {
-  //console.log(pokemonList[i]);
-}
-
-//pokemonList.forEach( (item) ==> console.log(item) )
-
-// --- --- --- --- IIFE --- --- --- --- ---
-
-//let pokemonRepository = (function() {
-  let pokemonList = []; // empty array
-
-  //return {
-    add: function(pokemon) {
-      pokemonList.push(pokemon);
-    },
-    //getAll: function() {
-      return pokemonList;
-    }
-  };
-})();
-
-//console.log(pokemonRepository.getAll()); // []
-//pokemonRepository.add({ name: 'Pikachu' });
-//console.log(pokemonRepository.getAll()); // [ { name: 'Pikachu' } ]
 
 
