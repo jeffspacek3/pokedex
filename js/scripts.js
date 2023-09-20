@@ -1,3 +1,4 @@
+let pokemonRepository = (function () {
 pokemonList = [
     {
         name: 'Bulbasaur',
@@ -14,7 +15,7 @@ pokemonList = [
         type: ['Electric'],
         height: 8 
     },
-];
+] };
 
 ///---------Exercise 1.6----------
 
