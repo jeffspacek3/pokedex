@@ -32,7 +32,7 @@ else {
   }
 
   function getAll() {
-    return pokemoneList;
+    return pokemonList;
   }
 
   function addListItem(pokemon) {
