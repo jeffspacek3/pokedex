@@ -9,7 +9,7 @@ let pokemonRepository = (function () {
         }).then(function (details) {
             console.log(details)
 
-            // Now we add the details to the item
+//---details of the item
             item.imageUrl = details.sprites.front_default;
             item.height = details.height;
             item.types = details.types;
@@ -30,7 +30,9 @@ let pokemonRepository = (function () {
         button.classList.add("button-class");
         button.addEventListener('click', function () { loadDetails(pokemon) })
         listpokemon.appendChild(button); pokemonList.appendChild(listpokemon);
-    } function loadList() {
+    }
+    
+    function loadList() {
         return fetch(apiUrl).then(function (response) { return response.json(); }).then(function (json) {
             json.results.forEach(function (item) {
                 let pokemon = { name: item.name, detailsUrl: item.url };
@@ -38,7 +40,10 @@ let pokemonRepository = (function () {
             });
 
         }).catch(function (e) { console.error(e); })
-    } return {
+    }
+
+    //---return what the iife is calling on
+    return {
         add: add,
         getAll: getAll,
         loadList: loadList,
@@ -48,8 +53,18 @@ let pokemonRepository = (function () {
 })();
 
 pokemonRepository.loadList().then(function () {
-    // Now the data is loaded!
+    
     pokemonRepository.getAll().forEach(function (pokemon) {
         pokemonRepository.addListItem(pokemon);
     });
+});
+
+//---modal
+function showModal() {
+  let modalContainer = document.querySelector('#modal-container');
+  modalContainer.classList.add('is-visible');
+}
+
+document.querySelector('#show-modal').addEventListener('click', () => {
+  showModal();
 });
