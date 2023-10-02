@@ -18,7 +18,7 @@
 
 
 #modal-container {
-  display: none;
+  display: block;
 }
 
 #modal-container.is-visible {
