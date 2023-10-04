@@ -107,6 +107,7 @@ function hideModal() {
   let modalContainer = document.querySelector
       ('#modal-container');
   modalContainer.classList.remove('is-visible');
+    closeButtonElement.addEventListener('click', hideModal);
 }
 
 //---note
