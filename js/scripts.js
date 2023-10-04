@@ -107,14 +107,11 @@ function hideModal() {
   let modalContainer = document.querySelector
       ('#modal-container');
   modalContainer.classList.remove('is-visible');
-    closeButtonElement.addEventListener('click', hideModal);
-}
-
-//---note
 let closeButtonElement = document.createElement('button');
 closeButtonElement.classList.add('modal-close');
 closeButtonElement.innerText = 'Close';
 closeButtonElement.addEventListener('click', hideModal);
+}
 
 //---closing the model via ESC key
 window.addEventListener('keydown', (e) => {
