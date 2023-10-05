@@ -93,14 +93,12 @@ function showModal(title, text) {
   modal.appendChild(titleElement);
   modal.appendChild(contentElement);
   modalContainer.appendChild(modal);
-
   modalContainer.classList.add('is-visible');
 }
 
 document.querySelector('#show-modal').addEventListener('click', () => {
   showModal('Modal title', 'This is the modal content!');
 });
-
 
 //---closing the modal utilizing the 'close' button---//
 function hideModal() {
@@ -115,6 +113,7 @@ closeButtonElement.addEventListener('click', hideModal);
 
 //---closing the model via ESC key
 window.addEventListener('keydown', (e) => {
+    closeButtonElement.addEventListener('click', hideModal)
   let modalContainer = document.querySelector('#modal-container');
   if (e.key === 'Escape' && modalContainer.classList.contains('is-visible')) {
     hideModal();  
