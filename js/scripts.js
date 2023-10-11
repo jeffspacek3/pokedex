@@ -72,7 +72,6 @@ document.querySelector('#show-modal').addEventListener('click', () => {
 
 function showModal(title, text) {
   let modalContainer = document.querySelector('#modal-container');
-
   // Clear all existing modal content
   modalContainer.innerHTML = '';
 
@@ -81,15 +80,21 @@ function showModal(title, text) {
 
   // Add the new modal content
   let closeButtonElement = document.createElement('button');
-  closeButtonElement.classList.add('modal-close');
-  closeButtonElement.innerText = 'Close';
+closeButtonElement.classList.add('modal-close');
+closeButtonElement.innerText = 'Close';
+closeButtonElement.addEventListener('click'. hideModal);
 
   let titleElement = document.createElement('h1');
-  titleElement.innerText = title;
+  titleElement.innerText = pokemon.name;
 
   let contentElement = document.createElement('p');
-  contentElement.innerText = text;
-
+  contentElement.innerText = "Height:" + pokemon.height;
+    
+    // create image element
+    let imageElement = document.creaeElement('img');
+    // use the pokemon imageUrl as src
+imageElement.src = pokemon.imageUrl;
+    //append image to the modal
   modal.appendChild(closeButtonElement);
   modal.appendChild(titleElement);
   modal.appendChild(contentElement);
