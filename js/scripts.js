@@ -8,13 +8,14 @@ let pokemonRepository = (function () {
             return response.json();
         }).then(function (details) {
             console.log(details)
-
-//---details of the item
             item.imageUrl = details.sprites.front_default;
             item.height = details.height;
             item.types = details.types;
+            showModal(item; //Pass the entire item to the showModal method
         }).catch(function (e) { console.error(e); });
-    } function add(pokemon) {
+    }
+    
+    function add(pokemon) {
         if (typeof pokemon === "object") {
             pokemonList.push(pokemon);
         } else {
