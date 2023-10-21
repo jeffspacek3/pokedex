@@ -33,6 +33,9 @@ let pokemonRepository = (function () {
     return pokemonList;
   }
   function addListItem(pokemon) {
+    let button = document.createElement("button");
+button.setAttribute("data-toggle","modal")
+button.setAttribute("data-target", "#exampleModal")
     let pokemonList = document.querySelector(".pokemon-list");
     let listpokemon = document.createElement("li");
     let button = document.createElement("button");
@@ -81,6 +84,7 @@ pokemonRepository.loadList().then(function () {
 
 function showModal(pokemon) {
   let modalContainer = document.querySelector("#modal-container");
+  let modalContainer = document.querySelector('.modal-body');
 
   // Clear all existing modal content
   modalContainer.innerHTML = "";
