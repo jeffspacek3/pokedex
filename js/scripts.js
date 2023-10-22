@@ -32,13 +32,13 @@ let pokemonRepository = (function () {
   function getAll() {
     return pokemonList;
   }
+  
   function addListItem(pokemon) {
-    let button = document.createElement("button");
-button.setAttribute("data-toggle","modal")
-button.setAttribute("data-target", "#exampleModal")
-    let pokemonList = document.querySelector(".pokemon-list");
+let pokemonList = document.querySelector(".pokemon-list");
     let listpokemon = document.createElement("li");
     let button = document.createElement("button");
+    button.setAttribute("data-toggle","modal")
+    button.setAttribute("data-target", "#exampleModal")
     button.innerText = pokemon.name;
     button.classList.add("button-class");
     button.addEventListener("click", function () {
@@ -83,14 +83,13 @@ pokemonRepository.loadList().then(function () {
 //---modal
 
 function showModal(pokemon) {
-  let modalContainer = document.querySelector("#modal-container");
   let modalContainer = document.querySelector('.modal-body');
 
   // Clear all existing modal content
   modalContainer.innerHTML = "";
 
   let modal = document.createElement("div");
-  modal.classList.add("modal");
+ 
 
   // Add the new modal content
   let closeButtonElement = document.createElement("button");
