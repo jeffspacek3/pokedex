@@ -101,7 +101,6 @@ function showModal(pokemon) {
   let imageElement = document.createElement("img");
   imageElement.src = pokemon.imageUrl;
 
-  modal.appendChild(closeButtonElement);
   modal.appendChild(titleElement);
   modal.appendChild(contentElement);
   modal.appendChild(imageElement);
