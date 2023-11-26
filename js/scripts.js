@@ -110,7 +110,7 @@ function showModal(pokemon) {
 }
 
 document.querySelector("#show-modal").addEventListener("click", () => {
-  showModal("Modal title", "This is the modal content!");
+  showModal("", "This is the modal content!");
 });
 
 //---closing the modal utilizing the 'close' button---//
